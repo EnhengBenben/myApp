@@ -1,0 +1,44 @@
+<div class="ibox">
+  <div class="ibox-title" style="background-color: #f0f0f0">
+    <h5>基础信息管理</h5>
+    <div class="ibox-tools">
+      <div class=" btn btn-sm btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> 添加</div>
+    </div>
+  </div>
+  <div class="ibox-content" style="background-color: #f0f0f0">
+    <div class="row">
+      <form class="form-horizontal">
+        <div class="form-group" style="margin-right: 0">
+          <div class="col-md-3 col-md-offset-9">
+            <input class="form-control" type="text"
+                   placeholder="搜索应用名称／客户名称">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let list of [1,2,3,4,5,6,7,8,9]">
+        <div class="application-list-card">
+          <div class="icon-status">
+            <span>新录入</span>
+          </div>
+          <div class="row">
+            <div class="col-md-4 image-box">
+              <img src="assets/images/user4-128x128.jpg" alt="">
+            </div>
+            <div class="col-md-8 card-description">
+              <h5>柏均摊</h5>
+              <p class="card-description-p1"><i class="fa fa-users" aria-hidden="true"></i> <span>北京华点云生物科技有限公司</span></p>
+              <p class="card-description-p2"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-01-09</p>
+            </div>
+          </div>
+          <div class="row operation">
+            <div class="col-md-4 version"><span>v 1.2</span></div>
+            <div class="col-md-4" style="border-right: 1px solid #aaa">修改</div>
+            <div class="col-md-4"><a>上线</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

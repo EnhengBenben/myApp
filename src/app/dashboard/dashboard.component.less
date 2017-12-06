@@ -1,0 +1,298 @@
+@them-color: #1dd2af;
+@default-color: #aaa;
+@white: #FFF;
+@gray: #f0f0f0;
+.application-list-card {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  background-color: @white;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  .row{
+    margin: 0;
+  }
+  .card-description{
+    h5, p{
+      margin: 10px 0;
+      font-size: 14px;
+      position: relative;
+      span{
+        position: absolute;
+        padding-left: 10px;
+      }
+    }
+    h5{
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    p{
+      margin-bottom: 4px;
+    }
+    p.card-description-p1{
+      line-height: 1.3;
+      padding: 10px 0;
+      margin: 0;
+      display: inline-block;
+      width: 100%;
+    }
+    p.card-description-p2{
+      padding-top: 4px;
+    }
+  }
+  .operation{
+    text-align: center;
+    span, a{
+      padding: 5px 0;
+      display: inline-block;
+      color: @them-color;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    .version{
+      background-color: #f0f0f0;
+    }
+  }
+  .icon-status {
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 40px solid #ddd;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -6px;
+    right: -26px;
+    span {
+      font-size: 12px;
+      position: absolute;
+      display: inline-block;
+      width: 100px;
+      top: 20px;
+      margin-left: -18px;
+    }
+  }
+  .image-box{
+    text-align: center;
+    img{
+      max-width: 66px;
+      margin-top: 16px;
+    }
+  }
+}
+.modal-header{
+  background-color: @them-color;
+  padding-bottom: 10px;
+  h5,h4{
+    display: inline-block;
+    color: #FFF;
+  }
+  .modal-close{
+    cursor: pointer;
+    color: #FFF;
+  }
+}
+.step{
+  position: relative;
+  .default-hr{
+    position: absolute;
+    margin-top: 0;
+    top: 50%;
+    width: 90%;
+    margin-left: 5%;
+    border-width: 3px;
+    border-color: @default-color;
+  }
+  .default-hr2{
+    border-color: @them-color;
+    width: 25%;
+    transition: width 0.5s;
+    -moz-transition: width 0.5s;	/* Firefox 4 */
+    -webkit-transition: width 0.5s;	/* Safari 和 Chrome */
+    -o-transition: width 0.5s;	/* Opera */
+  }
+  .active-step-2{
+    width: 70%;
+  }
+  .active-step-3{
+    width: 90%;
+  }
+  .col-md-4{
+    padding: 0;
+  }
+  .circel{
+    span{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 2px solid @them-color;
+      text-align: center;
+      background-color: @them-color;
+      color: #FFF;
+      border-radius: 30px;
+      line-height: 26px;
+      font-size: 16px;
+    }
+  }
+  .circel-default{
+    span{
+      border-color: @default-color;
+      background-color: @default-color;
+    }
+  }
+  .active{
+    span{
+      background-color: @them-color;
+      color: #FFF;
+      border-color: @them-color;
+    }
+  }
+}
+.step-description{
+  margin-top: 10px;
+  color: @default-color;
+  .active{
+    color: @them-color;
+  }
+}
+.active-step{
+  span{
+    background-color: #FFF !important;
+    color: @them-color !important;
+    border-color: @them-color !important;
+  }
+}
+.app-list{
+  margin-top: 20px;
+  .col-md-4{
+    margin-bottom: 10px;
+  }
+}
+.modal-step{
+  text-align: center !important;
+}
+
+.bill-report-list{
+  min-height: 450px;
+  .col-md-4{
+    .price-report-card{
+      height: 140px !important;
+      .price-report-operation{
+        .col-md-6{
+          height: 30px !important;
+          line-height: 30px !important;
+          p{
+            font-size: 14px !important;
+            cursor: pointer;
+          }
+          p:hover{
+            text-decoration: underline;
+          }
+        }
+        .col-md-4{
+          height: 25px;
+          margin-top: 10px;
+          line-height: 1.5;
+          font-size: 14px;
+          border-right: 1px solid #eee;
+          color: @them-color;
+          p{
+            cursor: pointer;
+          }
+          p:hover{
+            text-decoration: underline;
+          }
+        }
+        .col-md-4:nth-child(3){
+          padding-right: 0;
+          border: none;
+        }
+      }
+    }
+  }
+}
+.no-margin{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.bill-month-list{
+  //transition: background-color 0.5s;
+  //-moz-transition: background-color 0.5s;	/* Firefox 4 */
+  //-webkit-transition: background-color 0.5s;	/* Safari 和 Chrome */
+  //-o-transition: background-color 0.5s;	/* Opera */
+  width: 100%;
+  height: 140px;
+  color: @default-color;
+  .list-time{
+    padding-top: 20px;
+    width: 100px;
+    height: 100%;
+    float: left;
+    border-right: 1px solid @default-color;
+    font-size: 14px;
+    text-align: center;
+    position: relative;
+    .tag{
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      background-color: @default-color;
+      position: absolute;
+      top: 18px;
+      right: -10px;
+    }
+    .tag-shadow{
+      position: absolute;
+      height: 18px;
+      border-right: 1px solid #FFF;
+      top: 0;
+      right: -1px;
+      z-index: 100;
+    }
+  }
+  .list-detail{
+    float: left;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 30px;
+    .label-div{
+      margin-top: 20px;
+      span{
+        font-size: 14px;
+        color: #000;
+        margin-right: 30px;
+      }
+    }
+    .btn{
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+.bill-month-list:hover{
+  background-color: @gray;
+  .list-time{
+    color: @them-color;
+    .tag{
+      background-color: @them-color;
+    }
+    .tag-shadow{
+      border-color: @gray;
+    }
+  }
+}
+.widget{
+  i{
+    opacity: 0.6;
+  }
+  span{
+    font-size: 14px;
+  }
+  h2{
+    margin-top: 10px;
+  }
+}
+
