@@ -1,0 +1,39 @@
+<div class="content">
+  <div class="ibox-title">
+    <h5>测试账号管理</h5>
+    <div class="ibox-tools">
+      <div class="btn btn-sm btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> 新增账号</div>
+    </div>
+  </div>
+  <div class="ibox-content">
+    <div class="row" style="margin: 0">
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+          <thead>
+          <tr>
+            <th>用户名</th>
+            <th>客户名称</th>
+            <th>手机号</th>
+            <th>创建时间</th>
+            <th>操作</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let i of [1,2,3,4,5,6,7,8,9]">
+            <td>username</td>
+            <td>truename</td>
+            <td>cellphone</td>
+            <td>2017-12-06 18:08:48</td>
+            <td><span class="table-btn">追加APP</span>|
+              <span class="table-btn">删除APP</span>|
+              <span class="table-btn">追加权限</span>|
+              <span class="table-btn">删除权限</span>|
+              <span class="table-btn">禁用</span>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
