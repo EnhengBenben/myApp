@@ -7,14 +7,14 @@
         <img src="assets/images/user2-160x160.jpg" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Alexander Pierce</p>
-        <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        <p>嗯哼笨笨</p>
+        <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
       </div>
     </div>
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
-      <li class="header">MAIN NAVIGATION</li>
-      <li class="active treeview">
+      <li class="header">主菜单</li>
+      <li class="treeview" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <a routerLink="">
           <i class="fa fa-dashboard"></i> <span>应用管理</span>
           <span class="pull-right-container">
@@ -22,12 +22,12 @@
             </span>
         </a>
         <ul class="treeview-menu">
-          <li routerLinkActive="active"><a routerLink=""><i class="fa fa-circle-o"></i> 基本信息管理</a></li>
+          <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink=""><i class="fa fa-circle-o"></i> 基本信息管理</a></li>
         </ul>
       </li>
-      <li class="treeview">
-        <a href="#">
-          <i class="fa fa-dashboard"></i> <span>股票管理</span>
+      <li class="treeview" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">
+        <a routerLink="account">
+          <i class="fa fa-dashboard"></i> <span>账号管理</span>
         </a>
       </li>
     </ul>

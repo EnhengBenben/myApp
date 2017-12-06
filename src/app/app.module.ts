@@ -9,6 +9,7 @@ import { TopComponent } from './menu/top/top.component';
 import { FooterComponent } from './menu/footer/footer.component';
 import { ContentComponent } from './menu/content/content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FooterComponent,
     ContentComponent,
     DashboardComponent,
+    AccountComponent,
   ],
   imports: [
     BrowserModule,
