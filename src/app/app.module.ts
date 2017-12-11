@@ -10,6 +10,8 @@ import { FooterComponent } from './menu/footer/footer.component';
 import { ContentComponent } from './menu/content/content.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AccountComponent } from './account/account.component';
+import { DashboardEditComponent } from './dashboard/edit/edit.component';
+import { Code404Component } from './code404/code404.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { AccountComponent } from './account/account.component';
     ContentComponent,
     DashboardComponent,
     AccountComponent,
+    DashboardEditComponent,
+    Code404Component,
   ],
   imports: [
     BrowserModule,
