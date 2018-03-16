@@ -17,28 +17,32 @@
       </form>
     </div>
     <div class="row">
-      <div class="col-md-4" *ngFor="let list of [1,2,3,4,5,6,7,8,9]">
+      <div class="col-md-4" *ngFor="let list of data">
         <div class="application-list-card">
           <div class="icon-status">
             <span>新录入</span>
           </div>
           <div class="row">
             <div class="col-md-4 image-box">
-              <img src="assets/images/user4-128x128.jpg" alt="">
+              <img [src]="list.pictureNameUrl" alt="">
             </div>
             <div class="col-md-8 card-description">
-              <h5>柏均摊</h5>
-              <p class="card-description-p1"><i class="fa fa-users" aria-hidden="true"></i> <span>北京华点云生物科技有限公司</span></p>
-              <p class="card-description-p2"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-01-09</p>
+              <h5>{{ list.appName }}</h5>
+              <p class="card-description-p1"><i class="fa fa-users" aria-hidden="true"></i> <span>{{list.companyName}}</span></p>
+              <p class="card-description-p2"><i class="fa fa-calendar" aria-hidden="true"></i> {{list.createDate | date: 'yyyy-MM-dd'}}</p>
             </div>
           </div>
           <div class="row operation">
-            <div class="col-md-4 version"><span>v 1.2</span></div>
-            <div class="col-md-4" style="border-right: 1px solid #aaa" [routerLink]="['dashboard/edit', list]">修改</div>
-            <div class="col-md-4"><a>上线</a></div>
+            <div class="col-md-4 version"><span>{{list.version}}</span></div>
+            <div class="col-md-4" style="border-right: 1px solid #aaa"><a [routerLink]="['edit', list.appId]">修改</a></div>
+            <div class="col-md-4"><a>{{list.offLine == 0?'下线': '上线'}}</a></div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <p-paginator [rows]="10" [totalRecords]="20" [rowsPerPageOptions] = "[10,20,30]"></p-paginator>
+      <!--<p-paginator rows="10" totalRecords="120" [rowsPerPageOptions]="[10,20,30]"></p-paginator>-->
     </div>
   </div>
 </div>

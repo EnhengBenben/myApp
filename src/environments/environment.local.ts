@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  ENDPOINT: 'https://www.celloud.cc/celloud-oms/'
+  ENDPOINT: 'http://localhost:8080/celloud/'
 };

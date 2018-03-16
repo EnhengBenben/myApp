@@ -19,10 +19,12 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.less",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/admin-lte/dist/css/AdminLTE.css",
-        "../node_modules/admin-lte/dist/css/skins/skin-blue.css"
+        "../node_modules/admin-lte/dist/css/skins/skin-blue.css",
+        "styles.less",
+        "styles/button.less",
+        "styles/forms.less"
       ],
       "scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
@@ -32,7 +34,8 @@
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
+        "prod": "environments/environment.prod.ts",
+        "local": "environments/environment.local.ts"
       }
     }
   ],

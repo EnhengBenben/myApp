@@ -1,0 +1,16 @@
+<div class="content login-bg">
+  <div class="form-box">
+    <form action="" class="form form-horizontal m-t">
+      <div class="form-group">
+        <input class="form-control" type="text" name="username" [(ngModel)]="auth.name" placeholder="请输入姓名">
+      </div>
+      <div class="form-group">
+        <input class="form-control" type="password" name="pwd" [(ngModel)]="auth.pwd" placeholder="请输入密码">
+      </div>
+      <div class="form-group">
+        <input class="form-control btn btn-primary" type="submit" (click)="submit()">
+      </div>
+      <p class="m-t text-center">oms后台管理系统 ©2018 上海华点云生物科技有限公司</p>
+    </form>
+  </div>
+</div>

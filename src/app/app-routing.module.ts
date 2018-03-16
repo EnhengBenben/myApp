@@ -4,12 +4,18 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {AccountComponent} from './account/account.component';
 import {Code404Component} from './code404/code404.component';
 import {DashboardEditComponent} from './dashboard/edit/edit.component';
+import {LoginComponent} from "./login/login.component";
+import {AppComponent} from "./app.component";
+import {MenuComponent} from "./menu/menu.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'dashboard/edit/:id', component: DashboardEditComponent},
-  {path: 'account', component: AccountComponent},
+  {path: '', redirectTo: 'app/dashboard', pathMatch: 'full'},
+  {path: 'app', component: MenuComponent, children: [
+    {path: 'dashboard', component: DashboardComponent},
+    {path: 'dashboard/edit/:id', component: DashboardEditComponent},
+    {path: 'account', component: AccountComponent},
+  ]},
+  {path: 'login', component: LoginComponent},
   {path: '**', component: Code404Component},
 ];
 

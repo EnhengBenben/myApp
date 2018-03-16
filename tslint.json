@@ -80,8 +80,9 @@
       "check-whitespace"
     ],
     "prefer-const": true,
+//    单引号或者双引号
     "quotemark": [
-      true,
+      false,
       "single"
     ],
     "radix": true,
