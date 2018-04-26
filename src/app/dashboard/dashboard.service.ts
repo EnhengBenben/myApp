@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { environment } from "../../environments/environment";
+
 @Injectable()
 export class DashboardService {
   constructor(private http: HttpClient) {}
    ENDPOINT: string = environment.ENDPOINT;
-  httpOptions = {
+   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded',
-                                'Authorization': JSON.parse(window.localStorage.token).token}),
+                                'Authorization': JSON.parse(window.localStorage['token'])['token']}),
     Accept: 'application/json',
   };
 

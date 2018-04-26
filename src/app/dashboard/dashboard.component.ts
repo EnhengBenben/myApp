@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
 
   data = [];
   constructor(private service: DashboardService) {
+
   }
 
   ngOnInit() {

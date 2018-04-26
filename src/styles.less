@@ -41,3 +41,26 @@
 input:focus,input:active,select:focus,textarea:focus,input.form-control:focus{
   border-color: #1dd2af;
 }
+.ui-fileupload {
+  cursor: pointer;
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  border: 1px solid #c8c8c8;
+  overflow: hidden;
+  input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .ui-fileupload-buttonbar{
+    position: relative;
+    text-align: center;
+    line-height: 80px;
+  }
+}
