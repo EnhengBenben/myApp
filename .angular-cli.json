@@ -22,6 +22,8 @@
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/admin-lte/dist/css/AdminLTE.css",
         "../node_modules/admin-lte/dist/css/skins/skin-blue.css",
+        "../node_modules/primeng/resources/themes/omega/theme.css",
+        "../node_modules/primeng/resources/primeng.min.css",
         "styles.less",
         "styles/button.less",
         "styles/forms.less"

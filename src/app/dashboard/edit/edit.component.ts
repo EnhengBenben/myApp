@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
 import {FormArray, FormControl, FormGroup, NgModel} from "@angular/forms";
 import {DashboardService} from "../dashboard.service";
-import {FileUploadModule} from "primeng/primeng";
 
 @Component({
   selector: 'app-edit',
@@ -25,12 +24,6 @@ export class DashboardEditComponent implements OnInit {
   save() {
     console.log(this.formModel);
   }
-  onSelect($event) {
-    console.log($event, 'onSelect');
-  }
-  onBeforeUpload($event) {
-    console.log($event, 'onBeforeUpload');
-  }
   onBeforeSend($event) {
     $event.xhr.setRequestHeader('Authorization', JSON.parse(window.localStorage['token'])['token']);
     console.log($event);
@@ -38,7 +31,6 @@ export class DashboardEditComponent implements OnInit {
       pictureName: 'pictureName'
     };
   }
-
   ngOnInit() {
     this.editId = this.routeInfo.snapshot.params['id'];
     this.routeInfo.params.subscribe((params: Params) => this.editId = params['id']);

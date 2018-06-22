@@ -17,9 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { LoginComponent } from './login/login.component';
 import {AuthServiceService} from "./login/auth-service.service";
-import { PaginatorModule } from "primeng/paginator";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {FileUploadModule} from "primeng/primeng";
 
 @NgModule({
   declarations: [
@@ -43,7 +41,6 @@ import {FileUploadModule} from "primeng/primeng";
     HttpModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FileUploadModule
   ],
   providers: [AuthServiceService],
   bootstrap: [AppComponent]

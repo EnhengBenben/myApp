@@ -8,7 +8,7 @@ export class DashboardService {
    ENDPOINT: string = environment.ENDPOINT;
    httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded',
-                                'Authorization': JSON.parse(window.localStorage['token'])['token']}),
+                                'Authorization': JSON.parse(window.localStorage['token'])['token']} || ''),
     Accept: 'application/json',
   };
 
